@@ -1,0 +1,13 @@
+paso,proceso,instruccion,estado anterior,estado posterior,tramo
+1,Q,q1: x>1 verdadero,"(p1,q1,2) [S1]","(p1,q2,2) [S3]",prefijo
+2,P,p1: x<3 verdadero,"(p1,q2,2) [S3]","(p2,q2,2) [S5]",prefijo
+3,Q,q2: x=x-1,"(p2,q2,2) [S5]","(p2,q1,1) [S9]",prefijo
+4,P,p2: x=x+1,"(p2,q1,1) [S9]","(p1,q1,2) [S1]",prefijo (llega a S1 = inicio del ciclo)
+5,P,p1: x<3 verdadero,"(p1,q1,2) [S1]","(p2,q1,2) [S2]",ciclo vuelta 1
+6,P,p2: x=x+1,"(p2,q1,2) [S2]","(p1,q1,3) [S4]",ciclo vuelta 1
+7,Q,q1: x>1 verdadero,"(p1,q1,3) [S4]","(p1,q2,3) [S8]",ciclo vuelta 1
+8,Q,q2: x=x-1,"(p1,q2,3) [S8]","(p1,q1,2) [S1]",ciclo vuelta 1 (S1 REPETIDO)
+9,P,p1: x<3 verdadero,"(p1,q1,2) [S1]","(p2,q1,2) [S2]",ciclo vuelta 2
+10,P,p2: x=x+1,"(p2,q1,2) [S2]","(p1,q1,3) [S4]",ciclo vuelta 2
+11,Q,q1: x>1 verdadero,"(p1,q1,3) [S4]","(p1,q2,3) [S8]",ciclo vuelta 2
+12,Q,q2: x=x-1,"(p1,q2,3) [S8]","(p1,q1,2) [S1]",ciclo vuelta 2 (S1 REPETIDO)

@@ -28,9 +28,10 @@ package main
 
 import (
 	"fmt"
-	"github.com/cutajarj/ConcurrentProgrammingWithGo/chapter6/listing6.10"
 	"math/rand"
 	"time"
+
+	listing6_10 "github.com/cutajarj/ConcurrentProgrammingWithGo/chapter06/listing6.10"
 )
 
 const matrixSize = 1200
